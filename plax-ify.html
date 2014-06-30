@@ -11,7 +11,7 @@ Element providing solution to no problem in particular.
 @element plax-ify
 @blurb Element providing solution to no problem in particular.
 @status alpha
-@homepage http://polymerlabs.github.io/plax-ify
+@homepage https://github.com/RichardJohnn/plax-ify
 -->
 <polymer-element name="plax-ify" attributes="x y notitle author">
   <template>
@@ -32,14 +32,6 @@ Element providing solution to no problem in particular.
        */
       author: 'Richard Kubina',
 
-      /**
-       * `fancy` is a property that does something fancy.
-       *
-       * @property fancy
-       * @type bool
-       */
-      fancy: false,
-
       ready: function() {
         // Ready is a lifecycle callback.
         // You can do setup work in here.
@@ -47,7 +39,6 @@ Element providing solution to no problem in particular.
         this.x = parseInt(this.x);
         this.y = parseInt(this.y);
         children = this.children;
-debugger;
         for(var i = 0; i < children.length; i++)
         {
           this.plaxify(children[i], this.x + i * 30, this.y + i * 20, true);
@@ -72,20 +63,3 @@ debugger;
 
 </polymer-element>
 
-
-<polymer-element name="plax-element" attributes="notitle author">
-
-  <script>
-
-    Polymer('plax-element', {
-      /**
-       * The `author` attribute sets an initial author
-       *
-       * @attribute author
-       * @type string
-       */
-      author: 'Richard Kubina',
-
-      fancy: false,
-  </script>
-</polymer-element>
