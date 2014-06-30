@@ -1,0 +1,91 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="./plax.js"></script>
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <plax-ify></plax-ify>
+
+@element plax-ify
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://polymerlabs.github.io/plax-ify
+-->
+<polymer-element name="plax-ify" attributes="x y notitle author">
+  <template>
+    <link rel="import" href="./plax.js">
+    <link rel="stylesheet" href="plax-ify.css" />
+    <content></content>
+
+  </template>
+
+  <script>
+
+    Polymer('plax-ify', {
+      /**
+       * The `author` attribute sets an initial author
+       *
+       * @attribute author
+       * @type string
+       */
+      author: 'Richard Kubina',
+
+      /**
+       * `fancy` is a property that does something fancy.
+       *
+       * @property fancy
+       * @type bool
+       */
+      fancy: false,
+
+      ready: function() {
+        // Ready is a lifecycle callback.
+        // You can do setup work in here.
+        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
+        this.x = parseInt(this.x);
+        this.y = parseInt(this.y);
+        children = this.children;
+debugger;
+        for(var i = 0; i < children.length; i++)
+        {
+          this.plaxify(children[i], this.x + i * 30, this.y + i * 20, true);
+        }
+        plax.enable();
+      },
+
+      /**
+       * The `plaxify` method will plaxing
+       *
+       * @method plaxify
+       * @return {String} Returns jack shit
+       * @param {Object} DOM element to plaxify
+       */
+      plaxify: function(element, x, y, invert) {
+        plaxify(element, {xRange: x, yRange: y, invert: invert});
+      },
+
+    });
+
+  </script>
+
+</polymer-element>
+
+
+<polymer-element name="plax-element" attributes="notitle author">
+
+  <script>
+
+    Polymer('plax-element', {
+      /**
+       * The `author` attribute sets an initial author
+       *
+       * @attribute author
+       * @type string
+       */
+      author: 'Richard Kubina',
+
+      fancy: false,
+  </script>
+</polymer-element>
