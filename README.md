@@ -1,6 +1,6 @@
 plax-ify
 ================
-here is a lame demo: http://richardjohnn.github.io/
+here is a lame demo: http://richardjohnn.github.io/plax-ify/
 
 from a tutorial at:
 [guide to seed-element](http://www.polymer-project.org/docs/start/reusableelements.html)
